@@ -1,0 +1,4 @@
+.infoPrincipale{
+    display: flex;
+    flex-direction: column;
+}

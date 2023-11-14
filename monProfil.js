@@ -19,6 +19,36 @@ fetch("https://api.github.com/users/malakayalvg")
         myName.innerHTML = `Name: ${monProfil.name}`
     })
 
+const repositoryList = document.querySelector(".repositoryList")
+const buttonAddRep = document.querySelector(".buttonAddRep")
+
+// fetch("https://api.github.com/users/MalakayaLvg/repos")
+//     .then(response => response.json())
+//     .then(repositories=>{
+//             console.log(repositories[1])
+//             // repositories.forEach((repository)=>{
+//             //         buttonAddRep.addEventListener('click',()=>{
+//             //                 console.log("click")
+//             //         })
+//                     // repositoryList.innerHTML += `<a href="${repository.html_url}">${repository.name}</a>`
+//             })
 
 
- 
+let repositoryCounter = 0
+buttonAddRep.addEventListener("click",()=>{
+        console.log("click")
+        findRepository(repositoryCounter)
+        repositoryCounter ++
+        console.log(repositoryCounter)
+
+})
+//
+async function findRepository(repositoryNum){
+        await fetch("https://api.github.com/users/MalakayaLvg/repos")
+            .then(response => response.json())
+            .then(repositories=>{
+                    actualRepository = repositories[repositoryNum]
+                    repositoryList.innerHTML += `<a href="${actualRepository.html_url}">${actualRepository.name}</a>`
+            })
+}
+

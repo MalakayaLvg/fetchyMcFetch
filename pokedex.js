@@ -45,7 +45,7 @@ async function getPokemonObject (pokemonName){
 
  function getPokemonInfos (pokemonObject){
     pokemonInfos.innerHTML = `
-    <h5>name: ${pokemonObject.name.fr}</h5>
+    <h5>Nom: ${pokemonObject.name.fr}</h5>
     <h5>id: ${pokemonObject.pokedexId}</h5>
     <h5>Atk: ${pokemonObject.stats.atk}</h5>
     <h5>Def: ${pokemonObject.stats.def}</h5>
@@ -61,9 +61,16 @@ async function getPokemonObject (pokemonName){
 
  function getPokemonEvolution (pokemonObject){
     let IsTherePreEvolution = pokemonObject.evolution.pre
+    let IsThereNextEvolution = pokemonObject.evolution.next
+    let IsThereMegaEvolution = pokemonObject.evolution.mega
      if (IsTherePreEvolution != null){
         preEvolution.innerHTML = `Precedent Evolution : ${IsTherePreEvolution[0].name}`
-         console.log("pas null")
+     }
+     if (IsThereNextEvolution != null){
+         nextEvolution.innerHTML = `Evolution Suivante : ${IsThereNextEvolution[0].name}`
+     }
+     if (IsThereMegaEvolution != null){
+         megaEvolution.innerHTML = `Mega Evolution : ${IsThereMegaEvolution[0].orbe}`
      }
 
  }

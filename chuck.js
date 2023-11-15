@@ -24,10 +24,17 @@ fetch("https://api.chucknorris.io/jokes/categories")
     .then(response=>response.json())
     .then(data=>{
         data.forEach((category)=>{
-            buttonsCategory.innerHTML += `<button class="${category}">${category}</button>`
+            buttonsCategory.innerHTML += `<button class="buttonCatJoke" id="${category}">${category}</button>`
+
+            let buttonsCatJokes = document.querySelectorAll(".buttonCatJoke")
+            buttonsCatJokes.forEach((button=>{
+                button.addEventListener("click",()=>{
+                    console.log(button.id)
+                    getCategoryJoke(button.id)
+                })
+            }))
         })
     })
-
 
 
 
@@ -36,5 +43,7 @@ async function getCategoryJoke (cat){
         .then(response=>response.json())
         .then(data=>{
             console.log(data.value)
+            textRandomJoke.innerHTML += `<h4>${data.value}</h4>`
         })
 }
+

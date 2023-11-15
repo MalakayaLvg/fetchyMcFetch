@@ -1,0 +1,11 @@
+.buttonRandomJokes{
+    margin: 40px 0 40px 0;
+}
+.textRandomJoke{
+    display: flex;
+    flex-direction: column;
+}
+.buttonsCategories{
+    display: flex;
+
+}

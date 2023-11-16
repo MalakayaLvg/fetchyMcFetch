@@ -36,18 +36,20 @@
 
 <!---->
 
-<div>
-    <label for="changeCity">Changer la ville :</label>
-    <input type="text" id="changeCity" class="inputChangeCity">
-    <button class="buttonChangeCity">Rechercher</button>
+<div class="container d-flex flex-column align-items-center">
+    <div class="input-group my-5 z-O">
+        <input type="text" id="changeCity" class="inputChangeCity form-control" placeholder="Change Location">
+        <button class=" btn btn-warning buttonChangeCity">Rechercher</button>
+    </div>
 
-    <h2 class="ville"></h2>
-    <h1 class="temp"></h1>
-    <h6 class="temp-mini"></h6>
-    <h6 class="temp-maxi"></h6>
-    <div>
+
+    <h2 class="ville white"></h2>
+    <h1 class="temp white"></h1>
+    <h6 class="temp-mini white"></h6>
+    <h6 class="temp-maxi white"></h6>
+    <div class="d-flex align-items-center">
         <img src="" alt="" class="iconWeather">
-        <h3 class="weatherDescription"></h3>
+        <h3 class="weatherDescription white" ></h3>
     </div>
 </div>
 

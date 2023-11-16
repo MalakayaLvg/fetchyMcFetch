@@ -6,6 +6,8 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chuck Jokes'</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="pokedex.css">
 </head>
 <body>
@@ -19,27 +21,43 @@
   <a href="chuck.html">Chuck</a>
   <a href="meteo.html">Meteo</a>
   <a href="pokedex.html">Pokedex</a>
+</div>
 
+<div class="bandeau">
+  <div class="container bandeauPosition d-flex justify-content-between align-items-center">
+    <h2 class="white">FMF</h2>
+    <div class="burger">
+      <div class="steak"></div>
+      <div class="steak"></div>
+      <div class="steak"></div>
+    </div>
+  </div>
 </div>
 
 <!---->
+<div class="container">
+  <div class="input-group d-flex my-5">
+    <input class="form-control" type="text" id="inputPokemonName" placeholder="Entrez un nom de pokemon ou son id">
+    <button class=" btn btn-warning buttonSearch">Recherche</button>
+  </div>
 
-<label for="inputPokemonName">Nom du pokemon</label>
-<input type="text" id="inputPokemonName">
-<button class="buttonSearch">Search</button>
+  <div>
+    <div class="d-flex justify-content-center m-4">
+      <img src="" class="pokemonImage">
+    </div>
 
-<div>
-  <img src="" alt="" class="pokemonImage">
-  <div class="pokemonInfos"></div>
-  <div class="evolution">
-    <h5 class="preEvolution"></h5>
-    <h5 class="nextEvolution"></h5>
-    <h5 class="megaEvolution"></h5>
+    <div class="pokemonInfos white"></div>
+    <div class="evolution white">
+      <h5 class="preEvolution white"></h5>
+      <h5 class="nextEvolution white"></h5>
+      <h5 class="megaEvolution white"></h5>
+    </div>
   </div>
 </div>
 
 
 
+<script src="main.js"></script>
 <script src="pokedex.js"></script>
 </body>
 </html>

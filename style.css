@@ -11,15 +11,21 @@ html,body{
 .background{
     width: 100vw;
     height: 100vh;
-    background-color: cornflowerblue;
+    background-color: #052f79;
 }
 .bandeau{
     height: 15vh;
     width: 100%;
-    padding: 0 30px 0 30px;
-    background-color: blue;
+    background-color: #65acfa;
+}
+.bandeauPosition{
+    height: 100%;
+    width: 100%;
+}
+.mainPage{
+    height: 85vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -43,18 +49,45 @@ html,body{
 }
 
 .menu{
-    background-color: blue;
+    background-color: #052f79;
     position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     z-index: 1;
+    transform: translateX(300px);
+    transition: 1s;
+}
+a{
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding:20px 0 20px 0
+}
+
+a:hover{
+    color: #65acfa;
+    transition: 0.5s;
 }
 
 .ouvert{
     display: flex;
     height: 100vh;
     width: 100vw;
+    transform: translateX(0);
+
+}
+
+.header{
+    color: #65acfa;
+    border: #65acfa 1px solid;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (min-width:900px){

@@ -11,7 +11,7 @@ fetch("https://api.github.com/users/malakayalvg")
     .then(monProfil=>{
         console.log(monProfil)
         myLogin.innerHTML = `Login: ${monProfil.login}`
-        avatar.innerHTML = `<img src="${monProfil.avatar_url}" alt="avatar" style="width: 80vw">`
+        avatar.src = monProfil.avatar_url
         myCompany.innerHTML = `Company: ${monProfil.company}`
         myFollowers.innerHTML = `Followers: ${monProfil.followers}`
         myFollowing.innerHTML = `Following: ${monProfil.following}`

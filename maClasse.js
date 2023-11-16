@@ -35,13 +35,23 @@ etudiants = [
 
 function studentCard (student){
     let cardTemplate = `
-        <img src="${student.avatar}" alt="pp">
-        <h4>Prenom: ${student.name}</h4>
-        <h4>Login: ${student.login}</h4>
-        <h4>Github: ${student.githubUrl}</h4>
+        <div class="card my-4" style="width: 18rem;">
+          <img src="${student.avatar}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">${student.name}</h5>
+            <p class="card-text">Login: ${student.login}</p>
+            <a href="${student.githubUrl}" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+        
         `
     return cardTemplate
 }
+
+// <img src="${student.avatar}" alt="pp">
+//     <h4>Prenom: ${student.name}</h4>
+//     <h4>Login: ${student.login}</h4>
+//     <h4>Github: ${student.githubUrl}</h4>
 
 etudiants.forEach((etudiant)=>{
     donneeDesEtudiants(etudiant).then(etudiant=>{

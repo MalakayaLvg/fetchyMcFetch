@@ -25,7 +25,7 @@ fetch("https://api.chucknorris.io/jokes/categories")
     .then(response=>response.json())
     .then(data=>{
         data.forEach((category)=>{
-            buttonsCategory.innerHTML += `<button class="buttonCatJoke" id="${category}">${category}</button>`
+            buttonsCategory.innerHTML += `<button class="btn btn-light buttonCatJoke m-2" id="${category}">${category}</button>`
 
             let buttonsCatJokes = document.querySelectorAll(".buttonCatJoke")
             buttonsCatJokes.forEach((button=>{

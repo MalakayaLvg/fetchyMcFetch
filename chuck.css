@@ -1,6 +1,9 @@
-.buttonRandomJokes{
-    margin: 40px 0 40px 0;
+html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
+
 .textRandomJoke{
     display: flex;
     flex-direction: column;

@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chuck Jokes'</title>
-    <link rel="stylesheet" href="chuck.css">
+    <link rel="stylesheet" href="meteo.css">
 </head>
 <body>
 
@@ -23,11 +23,25 @@
 </div>
 
 <!---->
-<button class="buttonRandomJokes">Random Jokes</button>
-<div class="buttonsCategories"></div>
-<div class="textRandomJoke"></div>
+
+<div>
+    <label for="changeCity">Changer la ville :</label>
+    <input type="text" id="changeCity" class="inputChangeCity">
+    <button class="buttonChangeCity">Rechercher</button>
+
+    <h2 class="ville"></h2>
+    <h1 class="temp"></h1>
+    <h6 class="temp-mini"></h6>
+    <h6 class="temp-maxi"></h6>
+    <div>
+        <img src="" alt="" class="iconWeather">
+        <h3 class="weatherDescription"></h3>
+    </div>
+</div>
 
 
-<script src="chuck.js"></script>
+
+
+<script src="meteo.js"></script>
 </body>
 </html>

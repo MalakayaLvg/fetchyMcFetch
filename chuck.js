@@ -1,23 +1,24 @@
 const buttonRandomJoke = document.querySelector(".buttonRandomJokes")
 const textRandomJoke = document.querySelector(".textRandomJoke")
 
-// async function getRandomJoke (){
-//     let randomJoke = ""
-//     return await fetch("https://api.chucknorris.io/jokes/random")
-//         .then(response=>response.json())
-//         .then(data=>{
-//             console.log(data.value)
-//             randomJoke = data.value
-//             return randomJoke
-//         })
-// }
-//
-// buttonRandomJoke.addEventListener("click",()=>{
-//     console.log("click")
-//     getRandomJoke().then(data =>{
-//         textRandomJoke.innerHTML += `<h4>${data}</h4>`
-//         })
-//     })
+async function getRandomJoke (){
+    let randomJoke = ""
+    return await fetch("https://api.chucknorris.io/jokes/random")
+        .then(response=>response.json())
+        .then(data=>{
+            console.log(data.value)
+            randomJoke = data.value
+            return randomJoke
+        })
+}
+
+buttonRandomJoke.addEventListener("click",()=>{
+    console.log("click")
+    getRandomJoke().then(data =>{
+        textRandomJoke.innerHTML += `<h4>${data}</h4>`
+        })
+    })
+
 const buttonsCategory = document.querySelector(".buttonsCategories")
 
 fetch("https://api.chucknorris.io/jokes/categories")
